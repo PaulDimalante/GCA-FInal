@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<script>
+				function cancel() {
+				document.getElementById(username).value = ;
+				document.getElementById(password).value = ;
+				document.getElementById(message).value = Login Cancelled;
+				}
+				</script>
+			</head>
+	
+			<body>
+				<h1>Login</h1>
+				<br>
+				
+				<div>
+				<form action=/LoginVerify method=post>
+				<fieldset>
+				<legend>Login</legend><br>
+					User Name:<input type=text name=username id=username><br>
+					User Password:<input type=password name=password id=password><br>
+					<input type=submit>
+					<button type=button onclick=cancel()>Cancel</button>
+					<textarea name='message' id='message' rows='3' cols='30'>message</textarea>
+					</fieldset>
+				</form>
+				</div>
+			</body>
+		</html>

@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ page import="models.GCA_Tournament" %>
+    <%@ page import="springwork.model.Courses" %>
+	<%@ page import="java.util.Map" %>
+	<%@ page import="java.util.TreeMap" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Tournament Detail</title>
+	<style><%@include file="../views/DropDown.css"%></style>	
+</head>
+
+<%
+	int clubId = (Integer) session.getAttribute("clubId");
+	Courses courses = (Courses) session.getAttribute("courses");
+	GCA_Tournament tournament_ = new GCA_Tournament();
+	if (request.getAttribute("tournament") != null) {
+		tournament_ = (GCA_Tournament) request.getAttribute("tournament");
+	}
+	int courseId = tournament_.getCourseId();
+	String courseName = courses.getCoursesById().get(courseId).getCourseName();
+%>
+
+<body>
+	<%@ include file="header.jsp"%>
+	
+	<h2>Tournament Detail</h2>
+	<form:form action="tournamentDetail" method="GET" modelAttribute="tournament">
+		<fieldset>
+			<legend>Tournament</legend>
+			<form:hidden path="tournamentId" value="<%=tournament_.getTournamentId()%>"/>
+			<form:hidden path="clubId" value="<%=clubId%>"/>
+			<form:input type="text" path="tournamentName" value="<%=tournament_.getTournamentName()%>"/><br>
+
+			<form:hidden path="alwaysFlag" name="alwaysFlag" value="<%=tournament_.getAlwaysFlag()%>"/>
+			<form:radiobutton path="alwaysFlag" name="alwaysFlag" value="True" label="Yes"/>
+			<form:radiobutton path="alwaysFlag" name="alwaysFlag" value="False" label="No"/><br>
+
+			<form:input type="date" path="tournamentStartDate"/><br>
+			<form:input type="date" path="tournamentEndDate"/><br>
+			<form:hidden path="courseId" value="<%=courseId%>" /><br>
+			<input name="courseName" value="<%=courseName%>" /><br>
+
+			<form:radiobutton path="strokeMatchRule" name="strokeMatchRule" value="Stroke"/>Stroke Play
+			<form:radiobutton path="strokeMatchRule" name="strokeMatchRule" value="Match"/>Match Play<br>
+
+			<form:radiobutton path="handicapRule" name="handicapRule" value="True"/>Handicaps
+			<form:radiobutton path="handicapRule" name="handicapRule" value="False"/>No Handicaps<br>
+
+			<form:input type="number" path="handicapReductionPct"/><br>
+			<form:input type="number" path="teamSize"/><br>
+
+			<form:radiobutton path="groupFlag" name="groupFlag" value="True"/>Yes
+			<form:radiobutton path="groupFlag" name="groupFlag" value="False"/>No<br>
+
+			<form:radiobutton path="pointsFlag" name="pointsFlag" value="True"/>Yes
+			<form:radiobutton path="pointsFlag" name="pointsFlag" value="False"/>No<br>
+
+			<form:input type="number" path="pointsFrontNine"/><br>
+			<form:input type="number" path="pointsBackNine"/><br>
+			<form:input type="number" path="pointsOverAll"/><br>
+			
+			<form:radiobutton path="inFlightFlag" name="inFlightFlag" value="True" label="Yes"/>
+			<form:radiobutton path="inFlightFlag" name="inFlightFlag" value="False" label="No"/><br>
+
+			<form:radiobutton path="qualifierFlag" name="qualifierFlag" value="True"/>Yes
+			<form:radiobutton path="qualifierFlag" name="qualifierFlag" value="False"/>No<br>
+
+			<form:select path="qualifyingTournamentId"/><br>
+		</fieldset>
+		<input type="submit" value="submit"/><br>
+	</form:form>
+
+	<%@ include file="footer.jsp"%>
+</body>
+
+</html>

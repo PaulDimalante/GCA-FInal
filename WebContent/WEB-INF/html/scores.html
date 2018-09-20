@@ -1,0 +1,183 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Scores</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			table border = "1";
+			cellpadding = "5";
+			cellspacing = "5";
+		}
+		tbody tr th td input {
+			border-collapse: collapse;
+			border = "1";
+		}
+	</style>
+</head>
+
+
+
+<body>
+	
+
+<h1>Golf Club Assistant (GCA)</h1>
+<hr>
+<h2>Hello fff</h2>
+		<hr>
+
+
+	<div>
+	<form action="signup" method="get"><input type="submit" value="Sign Up" style="float:left"/></form>
+	<form action="pairings" method="get"><input type="submit" value="Pairings" style="float:left"/></form>
+	<form action="tournaments" method="get"><input type="submit" value="Tournaments" style="float:left"/></form>
+	<form action="members" method="get"><input type="submit" value="Members" style="float:left"/></form>
+	<form action="scores" method="get"><input type="submit" value="Scores" style="float:left"/></form>
+</div>
+<br><hr>
+
+	
+	<h2>Scores</h2>
+	<form action="scores" method="post">
+		<table>
+			<tbody>
+				<tr>
+					<th>Date</th>
+					<th>Course</th>
+					<th>Tee</th>
+					<th>Round#</th>
+				</tr>
+				<tr>
+					<td><input name="dateOfRound" type="text" placeholder="Date of Round"/></td>
+					<td>
+						<select name="courseId" size="1">
+						
+						</select>
+					</td>
+					<td>
+						<select name="courseTeeId" size="1">
+						
+						</select>
+					</td>
+					<td><input name="round" type="number" placeholder="1"/></td>
+					<td><input name="tournamentflag" type="radio" value="Yes"/>Tournament Score</td>
+					<td><input name="tournamentflag" type="radio" value="No"/>Non-Tournament Score</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<table>
+			<tbody>
+				<tr>
+					<th><input name="foresome" value="1"/></th>
+				</tr>
+	 			<tr>
+	 				<table>
+		 				<tbody>
+		 					<tr>
+		 						<th>Player</th>
+		 						<th>
+		 							<table>
+		 								<tr>
+											<th>01</th>
+											<th>02</th>
+											<th>03</th>
+											<th>04</th>
+											<th>05</th>
+											<th>06</th>
+											<th>07</th>
+											<th>08</th>
+											<th>09</th>
+											<th>front nine</th>
+											<th>10</th>
+											<th>11</th>
+											<th>12</th>
+											<th>13</th>
+											<th>14</th>
+											<th>15</th>
+											<th>16</th>
+											<th>17</th>
+											<th>18</th>
+											<th>back nine</th>
+											<th>overall</th>
+		 								</tr>
+		 							</table>
+	 							</th>
+	 						</tr>
+							<tr>
+								<td><input name="memberId1"/></td>
+								<td>
+									<table>
+										<tr>
+											<td><input name="hole11"/></td><td><input name="hole12"/></td><td><input name="hole13"/></td><td><input name="hole14"/></td><td><input name="hole15"/></td><td><input name="hole16"/></td><td><input name="hole17"/></td><td><input name="hole18"/></td><td><input name="hole19"/></td>
+											<td><input name="frontnine1"/></td>
+											<td><input name="hole110"/></td><td><input name="hole111"/></td><td><input name="hole112"/></td><td><input name="hole113"/></td><td><input name="hole114"/></td><td><input name="hole115"/></td><td><input name="hole116"/></td><td><input name="hole117"/></td><td><input name="hole118"/></td>
+											<td><input name="backnine1"/></td>
+											<td><input name="overall1"/></td>
+										</tr>
+									</table>
+								</td>
+							</tr><tr>
+								<td><input name="memberId2"/></td>
+								<td>
+									<table>
+										<tr>
+											<td><input name="hole21"/></td><td><input name="hole22"/></td><td><input name="hole23"/></td><td><input name="hole24"/></td><td><input name="hole25"/></td><td><input name="hole26"/></td><td><input name="hole27"/></td><td><input name="hole28"/></td><td><input name="hole29"/></td>
+											<td><input name="frontnine2"/></td>
+											<td><input name="hole210"/></td><td><input name="hole211"/></td><td><input name="hole212"/></td><td><input name="hole213"/></td><td><input name="hole214"/></td><td><input name="hole215"/></td><td><input name="hole216"/></td><td><input name="hole217"/></td><td><input name="hole218"/></td>
+											<td><input name="backnine2"/></td>
+											<td><input name="overall2"/></td>
+										</tr>
+									</table>
+								</td>
+							</tr><tr>
+								<td><input name="memberId3"/></td>
+								<td>
+									<table>
+										<tr>
+											<td><input name="hole31"/></td><td><input name="hole32"/></td><td><input name="hole33"/></td><td><input name="hole34"/></td><td><input name="hole35"/></td><td><input name="hole36"/></td><td><input name="hole37"/></td><td><input name="hole38"/></td><td><input name="hole39"/></td>
+											<td><input name="frontnine3"/></td>
+											<td><input name="hole310"/></td><td><input name="hole311"/></td><td><input name="hole312"/></td><td><input name="hole313"/></td><td><input name="hole314"/></td><td><input name="hole315"/></td><td><input name="hole316"/></td><td><input name="hole317"/></td><td><input name="hole318"/></td>
+											<td><input name="backnine3"/></td>
+											<td><input name="overall3"/></td>
+										</tr>
+									</table>
+								</td>
+							</tr><tr>
+								<td><input name="memberId4"/></td>
+								<td>
+									<table>
+										<tr>
+											<td><input name="hole41"/></td><td><input name="hole42"/></td><td><input name="hole43"/></td><td><input name="hole44"/></td><td><input name="hole45"/></td><td><input name="hole46"/></td><td><input name="hole47"/></td><td><input name="hole48"/></td><td><input name="hole49"/></td>
+											<td><input name="frontnine4"/></td>
+											<td><input name="hole410"/></td><td><input name="hole411"/></td><td><input name="hole412"/></td><td><input name="hole413"/></td><td><input name="hole414"/></td><td><input name="hole415"/></td><td><input name="hole416"/></td><td><input name="hole417"/></td><td><input name="hole418"/></td>
+											<td><input name="backnine4"/></td>
+											<td><input name="overall4"/></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+		 				</tbody>
+	 				</table>
+ 				</tr>
+			</tbody>
+		</table>
+		<input name="submit" type="submit" value="submit">
+	</form>
+
+	
+
+<hr>
+<p></p>
+<br>
+
+</body>
+</html>

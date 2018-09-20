@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<style>
+			.navbar {
+				background-color: black;
+				overflow: hidden;
+			}
+
+			.navbar a {
+				float: left;
+				color: white;
+				text-align: center;
+				padding: 15px;
+			}
+
+			.dropdown {
+				float: left;
+				background-color: black;
+				overflow: hidden;
+			}
+
+			.dropdown .dropbtn {
+				color: white;
+				padding: 15px;
+				border: none;
+				outline: none;
+				background-color: inherit;
+			}
+
+			.navbar a:hover, .dropdown:hover .dropbtn {
+				background-color: red;
+			}
+
+			.dropdown-content {
+				display: none;
+				background-color: silver;
+			}
+
+			.dropdown-content a {
+				float: none;
+				color: black;
+				display: block;
+			}
+
+			.dropdown-content a:hover {
+				
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+		<div style="height:50%; width:50%; background-color:grey;">
+			<div style="height:90%; width:40%; background-color:white; float:left">
+			</div>
+			<div style="height:90%; width:40%; background-color:silver; float:right">
+			</div>
+		</div>
+		/-->
+
+		<div class="navbar">
+			<a>aaa</a>
+			<a>bbb</a>
+			<div class="dropdown">
+				<button class="dropbtn">Admin
+				</button>
+				<div class="dropdown-content">
+					<a>ccc</a>
+					<a>ddd</a>
+					<a>eee</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+
+</html>

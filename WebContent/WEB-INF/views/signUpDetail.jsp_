@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ page import="springwork.model.SignUpBean" %>
+    <%@ page import="models.GCA_Tournament" %>
+    <%@ page import="models.GCA_SignUp" %>
+    <%@ page import="java.util.Map" %>
+    <%@ page import="java.util.Map.Entry" %>
+    <%@ page import="java.util.TreeMap" %>
+    <%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SignUp Detail</title>
+	<style><%@include file="../views/DropDown.css"%></style>	
+</head>
+
+<body>
+	<%@ include file="header.jsp"%>
+	<%@ include file="menu.jsp"%>
+	
+	<h2>Sign Up</h2>
+	
+	<form action="signUpDetail" method="POST">
+		Date<input readonly name="tournamentDate" value="${tournamentDate}"/><br>
+		Tournament<input readonly value="${tournamentName}"/><br>
+		<label>Playing</label>
+		<input type="radio" name="signedUpFlag" value="True"/>
+		<label>Not Playing</label>
+		<input type=radio name="signedUpFlag" value="False"/><br>
+		<input type="hidden" name="clubId" value="${signUp.clubId}"/><br>
+		<input type="hidden" name="memberId" value="${signUp.memberId}"/><br>
+		<input type="hidden" name="signUpDate" value="${signUp.signUpDate}" type="tournamentDate"/><br>
+		<input type="hidden" name="tournamentId" value="${signUp.tournamentId}"/><br>
+		<input type="hidden" name="signUpId" value="${signUp.signUpId}"/><br>
+
+		<input type="submit" value="Update"/><br>
+	</form>
+
+	<%@ include file="footer.jsp"%>
+</body>
+
+</html>

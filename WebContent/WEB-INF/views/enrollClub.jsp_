@@ -1,0 +1,91 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>EnrollClub</title>
+	<style><%@include file="../views/DropDown.css"%></style>	
+</head>
+
+<body>
+	<%@ include file="header.jsp"%>
+
+	<h2>Enroll Club</h2>
+	
+	<div class="container">
+		<form:form action="enrollClub" method="POST" modelAttribute="enrollForm">
+			<fieldset>
+				<legend>Club Info</legend>
+				<div class="sub_field">
+					<label>Club Name</label>
+					<form:input name="clubName" path="clubName" type="text" placeHolder="Enter Club Name"/>
+					<form:errors path="clubName"/>
+					<br>
+				</div>
+				<div class="sub_field">
+					<label>USGA Id</label>
+					<form:input name="clubUsgaId" path="clubUsgaId" type="text" placeHolder="Enter USGA Id"/>
+					<form:errors path="clubUsgaId"/><br>
+				</div>
+				<div class="sub_field">
+					<label>Name of Home Course</label>
+					<form:input name="clubHomeCourseName" path="clubHomeCourseName" type="text" placeHolder="Enter Name of Home Course"/>
+					<form:errors path="clubHomeCourseName"/><br>
+				</div>
+				<div class="sub_field">
+					<label>City</label>
+					<form:input name="clubCity" path="clubCity" type="text" placeHolder="Enter City"/>
+					<form:errors path="clubCity"/><br>
+				</div>
+				<div class="sub_field">
+					<label>State</label>
+					<form:input name="clubState" path="clubState" type="text" placeHolder="Enter State"/>
+					<form:errors path="clubState"/><br>
+				</div>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Club Administrator</legend>
+				<div class="sub_field">
+					<label>Name</label>
+					<form:input name="memberName" path="memberName" type="text" placeHolder="Enter Member Name"/>
+					<form:errors path="memberName"/><br>
+				</div>
+				<div class="sub_field">
+					<label>Nickname</label>
+					<form:input name="memberNickName" path="memberNickName" type="text" placeHolder="Enter Member's Nickname"/>
+					<form:errors path="memberNickName"/><br>
+				</div>
+				<div class="sub_field">
+					<label>Login Id</label>
+					<form:input name="memberLoginId" path="memberLoginId" type="text" placeHolder="Enter Member's Login Id"/>
+					<form:errors path="memberLoginId"/>
+				</div>
+				<div class="sub_field">
+					<label>USGA Id</label>
+					<form:input name="memberUsgaId" path="memberUsgaId" type="text" placeHolder="Enter USGA Id"/>
+					<form:errors path="memberUsgaId"/><br>
+				</div>
+				<div class="sub_field">
+					<label>Password</label>
+					<form:input name="memberPassWord" path="memberPassWord" type="password" placeHolder="Enter Password"/>
+					<form:errors path="memberPassWord"/><br>
+				</div>
+				<div class="sub_field">
+					<label>Password Verify</label>
+					<form:input name="memberPassWordVerify" path="memberPassWordVerify" type="password" placeHolder="Verify Password"/>
+					<form:errors path="memberPassWordVerify"/><br>
+				</div>
+			</fieldset>
+			<div class="sub_field">
+				<input type="submit" value="Enroll Club"/>
+			</div>
+		</form:form>
+	</div>
+
+	<%@ include file="footer.jsp"%>
+</body>
+</html>

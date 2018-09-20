@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<!-- comments -->
+
+<html>
+	<head>
+		<title>Test</title>
+
+		<meta http-equiv = "Content-Script-Type" content = "text/JavaScript" />
+		
+		<!----------------------->
+
+	    <script type="text/JavaScript">
+	    	function sayHello() {
+	          	alert("Hello");
+	        }
+	    	function sayGoodbye() {
+	          	alert("Goodbye");
+	        }
+	    	function junk() {
+				//var junk = document.getElementByName("textdata");
+	        }
+      	</script>
+
+		<link rel="stypesheet" type="text/ccs" href="mystyle.css">
+		<link rel="stypesheet" type="text/ccs" href="DropDown.css">
+    	<link rel="stylesheet" type="text/css" href="testDrag.css" media="screen" />
+	    <script type="text/javascript" src="testDrag.js"></script>
+		
+		<style>
+			p, h1, h2 {stype="border:1px solid black;"}
+
+			body {
+				background-image: url("xxx.jpg");
+				backgroupd-repeat: repeat-x;
+				background-position: right top;
+				background-attachment: fixed;
+				border-stype: solid;
+				border-width: 1px;
+				border-color: black;
+			}
+
+			#id1 {}
+		</style>
+
+		<style>
+			.hole {size="4"}
+		</style>
+
+		<style>
+			table {
+				border-collase: collapse;
+				border-spacing: 0px;
+				border = "1";
+			}
+			th {
+				border-collase: collapse;
+			}
+			tr {
+				border-collase: collapse;
+			}
+			td {
+				border-collase: collapse;
+			}
+			input {
+				border-collase: collapse;
+			}
+		</style>
+		
+		<style>
+			div.scrollmenu {
+			    background-color: #333;
+			    overflow: auto;
+			    white-space: nowrap;
+			}
+
+			div.scrollmenu a {
+			    display: inline-block;
+			    color: white;
+			    text-align: center;
+			    padding: 14px;
+			    text-decoration: none;
+			}
+
+			div.scrollmenu a:hover {
+			    background-color: #777;
+			}
+		</style>
+
+		<base href="http://www.foxnews.com/us.html/">
+	</head>
+
+	<body onpageshow onpagehide onunload>
+		<div style="width:90%; height:90%;">
+      		<div style="width=40%; height=90%; float:left; border:solid black">
+		        <ul>
+		            <li draggable="true" class="sortable-bulk">List Item 1</li>
+		            <li draggable="true" class="sortable-bulk">List Item 2</li>
+		            <li draggable="true" class="sortable-bulk">List Item 3</li>
+		            <li draggable="true" class="sortable-bulk">List Item 4</li>
+		            <li draggable="true" class="sortable-bulk">List Item 5</li>
+		            <li draggable="true" class="sortable-bulk">List Item 6</li>
+		            <li draggable="true" class="sortable-bulk">List Item 7</li>
+		            <li draggable="true" class="sortable-bulk">List Item 8</li>
+		            <li draggable="true" class="sortable-bulk">List Item 9</li>
+		            <li draggable="true" class="sortable-bulk">List Item 10</li>
+		        </ul>
+	        </div>
+
+      		<hr>
+
+      		<div style="width=40%; height=90%; float:right; border:solid black">
+        		<ul>
+            		<li draggable="true" class="sortable-bulk"></li>
+        		</ul>
+      		</div>
+  		</div>
+
+		<table border="1" width="100%">
+			<tr>
+				<th width="10%">name</th>
+				<th width="10%">Number</th>
+				<th width="80%">junk</th>
+			</tr>
+			<tr>
+				<div draggable="true" >
+					<td width="10%">myname</td>
+					<td width="10%">munumber</td>
+					<td width="80%">junk</th>
+				</div>
+			</tr>
+			<tr>
+				<div draggable="true" >
+					<td>myname</td>
+					<td>munumber</td>
+				</div>
+			</tr>
+			<tr>
+				<div draggable="true" >
+					<td>myname</td>
+					<td>munumber</td>
+				</div>
+			</tr>
+			<tr>
+				<div>
+					<td>myname</td>
+					<td>munumber</td>
+				</div>
+			</tr>
+		</table>
+		
+		<table border = "1">
+			<tr><th>1</th></tr>
+			<tr>
+				<th>
+					<table border = "1">
+					<tr>
+						<th>Player</th>
+						<th>
+							<table border = "1">
+								<tr>
+									<th>01</th>
+									<th>02</th>
+									<th>03</th>
+									<th>04</th>
+								</tr>
+							</table>
+						</th>
+					</tr>
+					<tr>
+						<td>Player1</td>
+						<td>
+							<table border = "1">
+								<tr>
+									<th>01</th>
+									<th>02</th>
+									<th>03</th>
+									<th>04</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>Player2</td>
+						<td>
+							<table border = "1">
+								<tr>
+									<th>01</th>
+									<th>02</th>
+									<th>03</th>
+									<th>04</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>Player3</td>
+						<td>
+							<table border = "1">
+								<tr>
+									<th>01</th>
+									<th>02</th>
+									<th>03</th>
+									<th>04</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>Player4</td>
+						<td>
+							<table border = "1">
+								<tr>
+									<th>01</th>
+									<th>02</th>
+									<th>03</th>
+									<th>04</th>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				</th>
+			</tr>
+		</table>
+	
+	
+	
+	
+		<h1>This is a h1</h1>
+		<h2>This is a h2</h2>
+		<h3>This is a h3</h3>
+		<h4>This is a h4</h4>
+		<h5>This is a h5</h5>
+		<h6>This is a h6</h6>
+		<p>This is a p</p>
+		<a href="https://www.w3scols.com">This is a link</a>
+		<br>
+
+		<img src="C:/Users/Students/eclipse-workspace/HelloWorld/src/main/webapp/images/x.png" alt="This is an image" ismap>
+
+		<br>
+		<button>Button</button>
+
+		<div class="dropdown">
+		  <button class="dropbtn">Dropdown</button>
+		  <div class="dropdown-content">
+		    <a href="#">Link 1</a>
+		    <a href="#">Link 2</a>
+		    <a href="#">Link 3</a>
+		  </div>
+		</div>
+
+		<div class="scrollmenu">
+		  <a onclick="sayHello()">Admin</a>
+		  <a href="javascript:void(0);" class="icon" onclick="sayHello()">Home</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="#support">Support</a>
+		  <a href="#blog">Blog</a>
+		  <a href="#tools">Tools</a>  
+		  <a href="#base">Base</a>
+		  <a href="#custom">Custom</a>
+		  <a href="#more">More</a>
+		  <a href="#logo">Logo</a>
+		  <a href="#friends">Friends</a>
+		  <a href="#partners">Partners</a>
+		  <a href="#people">People</a>
+		  <a href="#work">Work</a>
+		</div>
+
+		<h2>Horizontal Scrollable Menu</h2>
+		<p>Resize the browser window to see the effect.</p>
+
+
+		<ul type="circle">
+			<li>This is an unordered list 1</li>
+			<li>This is an unordered list 2</li>
+			<li>This is an unordered list 3</li>
+		</ul>
+
+		<ol type="1" start="4" reversed start>
+			<li>This is an ordered list 1</li>
+			<li>This is an ordered list 2</li>
+			<li>This is an ordered list 3</li>
+		</ul>
+
+		<dl>
+			<dt>cow</dt>
+			<dd>cow goes moo</dd>
+			<dt>dog</dt>
+			<dd>dog goes wooof</dd>	
+		</dl>
+
+		<p><br>
+			<a href="/us.html" target="_blank">foxnews.us_blank</a><br>
+			<a href="https://www.google.com" target="_parent">google_parent</a><br>
+			<a href="https://www.google.com" target="_top">google_top</a><br>
+			<a href="https://www.google.com" target="_self">google_self</a><br>
+			<a href = "mailto: Paul.Dimalante@gmail.com">Send Email</a>
+		</p>
+
+		<hr>
+
+		<form oninput="frontnine.value=parseInt(h01.value)
+							  +parseInt(h02.value)
+							  +parseInt(h03.value)
+							  +parseInt(h04.value)
+							  +parseInt(h05.value)
+							  +parseInt(h06.value)
+							  +parseInt(h07.value)
+							  +parseInt(h08.value)
+							  +parseInt(h09.value)
+							  ">
+  			<input class="hole" type="text" id="h01" value="0" size="4"}>
+  			<input class="hole" type="text" id="h02" value="0" size="4">
+  			<input type="text" id="h03" value="0" size="4">
+  			<input type="text" id="h04" value="0" size="4">
+  			<input type="text" id="h05" value="0" size="4">
+  			<input type="text" id="h06" value="0" size="4">
+  			<input type="text" id="h07" value="0" size="4">
+  			<input type="text" id="h08" value="0" size="4">
+  			<input type="text" id="h09" value="0" size="4">
+  			=<output name="frontnine" size="4" for="h01 h02 h03 h04 h05 h06 h07 h08 h09"></output>
+		</form>
+
+		<form name="formname" action="Click" method="post" target="_self/_blank" method="get/post" nonvalidate>
+			<fieldset>
+				<legend>Input Form Legend</legend>
+				Enter text
+				<br>
+				textdata:<input type="text" name="textdata" id=textdata>
+				<br>
+				Enter radio:
+				<br>
+				<input type="radio" name="yesno" value="yes"> Yes<br>
+				<input type="radio" name="yesno" value="no" checked> No<br>
+				Enter password:
+				<br>
+				<input type="password" name="password"><br>
+				<input type = "checkbox" name = "maths" value = "on" checked> Maths
+         		<input type = "checkbox" name = "physics" value = "on"> Physics
+         		<br>
+         		Hidden:<input type="hidden" name="hiddenVar" value="somevalue">
+         		<br>
+
+				<select name="rules" size="4" multiple>
+					<option value="stoke play" selected>StrokePlay</option>
+					<option value="match play">MatchPlay</option>
+					<option value="scramble">Scramble</option>
+				</select>
+				<br>click button:
+				<input type="submit">
+				<button type="button" onclick="alert('Why did you click me?')">Cancel</button>
+				<button type="button" onclick="sayHello()">Hello</button>
+				<button type="button" onclick="sayGoodbye()">Goodbye</button>
+				<br>
+				<textarea name="message" rows="5" cols="30">
+					This is a message
+				</textarea>
+			</fieldset>
+		</form>
+
+		<form action="datalistaction">
+			<fieldset>
+				<legend>Data List legend</legend>
+				DataList
+				<input list="datalistid">
+				<datalist id="datalistid">
+					<option value="Howard, Moe">
+					<option value="Fine, Larry">
+					<option value="Howard, Curly">
+				</option>
+			</fieldset>
+		</form>
+
+		<table border = "1">
+			<tr>
+				<td  colspan="4">
+					<input name="foresome" type="text" value="1" readonly/>
+				</td>
+			</tr>
+			<tr>
+				<td  colspan="4">
+					<table border = "1">
+						<tr>
+							<td>a1</td>
+							<td>b1</td>
+							<td>c1</td>
+							<td>d1</td>
+						</tr>
+						<tr>
+							<td>a2</td>
+							<td>b2</td>
+							<td>c2</td>
+							<td>d2</td>
+						</tr>
+						<tr>
+							<td>a3</td>
+							<td>b3</td>
+							<td>c3</td>
+							<td>d3</td>
+						</tr>
+						<tr>
+							<td>a4</td>
+							<td>b4</td>
+							<td>c4</td>
+							<td>d4</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+		<table border = "1" cellpadding = "5" cellspacing = "5">
+			<tr>
+				<th>a</th>
+				<th>b</th>
+				<th>c</th>
+				<th>d</th>
+				<th>e</th>
+			</tr>
+			<tr>
+				<td rowspan="4">1</td>
+				<td>b1</td>
+				<td>c1</td>
+				<td>d1</td>
+				<td>e1</td>
+			</tr>
+			<tr>
+				<td>b2</td>
+				<td>c2</td>
+				<td>d2</td>
+				<td>e2</td>
+			</tr>
+			<tr>
+				<td>b3</td>
+				<td>c3</td>
+				<td>d3</td>
+				<td>e3</td>
+			</tr>
+			<tr>
+				<td>b4</td>
+				<td>c4</td>
+				<td>d4</td>
+				<td>e4</td>
+			</tr>
+		</table>
+		
+		<table border = "1" cellpadding = "5" cellspacing = "5">
+			<caption>This is a table</caption>
+			<thead>
+				<td colspan = "2">The is a table header</td>
+			</thead>
+			<tfoot>
+				<td colspan = "4">This is a table footer</td>
+			</tfoot>
+			<tbody>this is a table body<br>
+				<tr>
+					<th>id</th>
+					<th>name</th>
+				</tr>
+				<tr>
+					<td>0001</td>
+					<td>Howard, Moe</td>
+				</tr>
+				<tr>
+					<td>0002</td>
+					<td>Fine, Larry</td>
+				</tr>
+			</tbody>
+		</table>
+
+<!-- 
+		<div 
+			ccs
+				align
+				bgcolor
+				border
+				color
+			attributes
+				width="55"
+				height="55"
+				alt="alt text"
+				title="title"
+				disabled
+				autofocus
+				contenteditable
+				id
+				dir
+				draggable
+				dropzone
+				height
+				width
+				name
+				hidden
+				onblur
+				onfocus
+				onchange
+				onclick
+				oncontextmenu
+				oncopy
+				onpaste
+				oncut
+				ondblclick
+				ondrag
+				ondragenter
+				ondragleave
+				ondragover
+				ondragstart
+				ondrop
+				oninput
+				oninvalid
+				onkeydown
+				onkeyup
+				onmousedown
+				onmousemove
+				onmouseout
+				onmouseover
+				onmouseup
+				onmousewheel
+				onscroll
+				onsearch
+				onselect
+				onwheel
+				class
+				src
+				tabindex
+				title
+				value
+				style=
+					"color:red"
+
+			<input type="" name="" accept="" checked list pattern placholder readonly required size step>
+			<textarea cols="" rows="" placeholder readonly required>
+			<select required size wrap>
+			<form action="" enctype method="post" novalidate onreset onsubmit>
+			<td,th> colspan, rowspan headers>
+			<th scope>
+			<option selected>
+			<meta content http-equiv>
+			<area coords>
+			<object data>
+			<del,ins,time datetime>
+			<label,output for>
+			<button,fieldset,input,label,meter,outject,output,select,textarea form>
+			<button,input formaction type="submit">
+			<meter high low >
+			<a,area,base,link href>
+			<a,area,link hreflang>
+			<track,option,optgroup label>
+			<input,select multiple>
+			<details ontoggle open>
+			<a,area,base,form target>
+
+		-->
+	</body>
+	</body>
+</html>

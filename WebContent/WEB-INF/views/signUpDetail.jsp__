@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ page import="springwork.model.SignUpBean" %>
+    <%@ page import="models.GCA_Tournament" %>
+    <%@ page import="models.GCA_SignUp" %>
+    <%@ page import="commonFunctions.CommonFunctions" %>
+    <%@ page import="java.util.Map" %>
+    <%@ page import="java.util.Map.Entry" %>
+    <%@ page import="java.util.TreeMap" %>
+    <%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SignUp Detail</title>
+	<style><%@include file="../views/DropDown.css"%></style>	
+</head>
+
+<%
+	String signedUpFlag = "False";
+	if (request.getAttribute("signedUpFlag") != null) {
+		signedUpFlag = (String) request.getAttribute("signedUpFlag");
+	}
+	GCA_SignUp signUp = new GCA_SignUp();
+	if (request.getAttribute("signUp") != null) {
+		signUp = (GCA_SignUp) request.getAttribute("signUp");
+	}
+	Date tournamentDate = null;
+	if (request.getAttribute("tournamentDate") != null) {
+		tournamentDate = (Date) request.getAttribute("tournamentDate");
+	}
+	String tournamentName = "";
+	if (request.getAttribute("tournamentName") != null) {
+		tournamentName = (String) request.getAttribute("tournamentName");
+	}
+	String checkedTrue = "checked";
+	String checkedFalse = "checked";
+	if (signedUpFlag.equals("True")) {
+		checkedTrue = "checked";
+		checkedFalse = " ";
+	} else if (signedUpFlag.equals("False")) {
+		checkedTrue = " ";
+		checkedFalse = "checked";
+	}
+%>
+
+<body>
+	<%@ include file="header.jsp"%>
+	<%@ include file="menu.jsp"%>
+	
+	<h2>Sign Up</h2>
+	
+	<form:form action="signUpDetail" method="POST" modelAttribute="signUp">
+		Date<form:input type="date" readonly path="tournamentDate" name="tournamentDate" value="${tournamentDate}"/><br>
+		Tournament<form:input path="tournamentName" name="tournamentName" readonly value="${tournamentName}"/><br>
+		<label>Playing</label>
+		<form:radiobutton path="signedUpFlag" name="signedUpFlag" value="true" />
+		<label>Not Playing</label>
+		<form:radiobutton path="signedUpFlag" name="signedUpFlag" value="false" /><br>
+		<form:hidden path="clubId" name="clubId" value="${signUp.clubId}"/><br>
+		<form:hidden path="memberId" name="memberId" value="${signUp.memberId}"/><br>
+		<form:hidden path="signUpDate" name="signUpDate" value="${signUp.signUpDate}" type="date"/><br>
+		<form:hidden path="tournamentId" name="tournamentId" value="${signUp.tournamentId}"/><br>
+		<form:hidden path="signUpId" name="signUpId" value="${signUp.signUpId}"/><br>
+
+		<input type="submit" value="Update"/><br>
+	</form:form>
+
+	<%@ include file="footer.jsp"%>
+</body>
+
+</html>
