@@ -12,6 +12,20 @@ public class GCA_Member {
 	private String memberPassWord;
 	private String memberLoginId;
 
+	public GCA_Member deepCopy(GCA_Member memberIn) {
+		GCA_Member memberOut = new GCA_Member();
+		
+		memberOut.setMemberId(memberIn.getMemberId());
+		memberOut.setClubId(memberIn.getClubId());
+		memberOut.setMemberName(memberIn.getMemberName());
+		memberOut.setMemberNickName(memberIn.getMemberNickName());
+		memberOut.setMemberUsgaId(memberIn.getMemberUsgaId());
+		memberOut.setMemberPassWord(memberIn.getMemberPassWord());
+		memberOut.setMemberLoginId(memberIn.getMemberLoginId());
+		
+		return memberOut;
+	}
+	
 	public GCA_Member() {
 		super();
 	}

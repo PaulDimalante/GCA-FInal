@@ -119,6 +119,7 @@ public class MemberTransactions {
 			if (success) {
 				connection.commit();
 			} else {
+				member.setMemberId(0);	// backout memberId update
 				connection.rollback();
 			}
 		} catch (ClassNotFoundException e) {

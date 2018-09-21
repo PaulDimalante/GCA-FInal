@@ -57,5 +57,4 @@ public class CommonFunctions {
 		java.sql.Date sqlDate = java.sql.Date.valueOf(localDate);
 		return (sqlDate);
 	}
-
 }
